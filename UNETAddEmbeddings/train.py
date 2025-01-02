@@ -117,7 +117,7 @@ def training_loop(n_epochs, optimizer, model, loss_fn, device, data_loader, vae 
 
         # Save model checkpoint with the current epoch in the filename
 
-        with open("UNETAddEmbeddings/weights/celebA-diffusion-loss.txt", "a") as file:
+        with open("UNETAddEmbeddings/celebA-diffusion-loss.txt", "a") as file:
             file.write(f"{loss_train / len(data_loader)}\n")
 
         print('{} Epoch {}, Training loss {}'.format(datetime.datetime.now(), epoch, loss_train / len(data_loader)))
